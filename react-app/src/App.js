@@ -1,4 +1,5 @@
 import './App.css';
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -17,6 +18,15 @@ function App() {
           Learn React
         </a>
       </header>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/pageone">PageOne</Link> |{" "}
+        <Link to="/pagetwo">PageTwo</Link>
+      </nav>
     </div>
   );
 }
