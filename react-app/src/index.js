@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import PageOne from './routes/PageOne';
-import PageTwo from './routes/PageTwo';
+import About from './routes/About';
+import List from './routes/List';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,8 +13,8 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<App/>} />
-      <Route path="pageone" element={<PageOne/>} />
-      <Route path="pagetwo" element={<PageTwo/>} />
+      <Route path="about" element={<About/>} />
+      <Route path="list" element={<List/>} />
     </Routes>
 </BrowserRouter>
 );
