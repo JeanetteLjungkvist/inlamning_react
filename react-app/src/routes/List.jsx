@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { Navbar } from '../components';
+import { Navbar, TodoList} from '../components';
 
 const List = () => {
   useEffect(() => {
@@ -7,7 +7,8 @@ const List = () => {
   }, []);
   return (
     <div>
-<Navbar/>
+      <Navbar/>
+      <TodoList/>
     </div>
   )
 }
