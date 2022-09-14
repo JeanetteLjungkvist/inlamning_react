@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      
       <div className="home-container">
         <h1 className="home-h1">Where do you want to visit?</h1>
         <div className="vertical-center">
@@ -19,7 +18,6 @@ function App() {
           <button className="home-btn"><Link to="/list">Todo List</Link></button>
         </div>
       </div>
-      
     </div>
   );
 }

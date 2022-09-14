@@ -7,6 +7,7 @@ const Counter = () => {
   const reset = () =>{
     setCount(0)
   }
+  
   return (
     
     <div className="counter-div">
@@ -18,7 +19,6 @@ const Counter = () => {
         <button className="reset-btn" onClick={reset}>Reset</button>
       </div>
     </div>
-    
   )
 }
 

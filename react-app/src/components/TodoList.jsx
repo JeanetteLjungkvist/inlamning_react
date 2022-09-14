@@ -52,18 +52,17 @@ const Form = ({addTodo}) => {
 
 return(
     <div>
-    
-    <form className="todo-input" onSubmit={submitTodo}>
-    <input
-    type="text"
-    placeholder="Add Todo"
-    value={todo}
-    onChange={(todosItem) => setTodo(todosItem.target.value)}
-    />
-    <input type="submit" value="Add Todo"/>
+        <form className="todo-input" onSubmit={submitTodo}>
+            <input
+            type="text"
+            placeholder="Add Todo"
+            value={todo}
+            onChange={(todosItem) => setTodo(todosItem.target.value)}
+            />
 
-    </form>
-  </div>
+            <input type="submit" value="Add Todo"/>
+        </form>
+    </div>
 )
 }
 
