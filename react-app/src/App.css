@@ -1,5 +1,12 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #043362;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
-  background-color: #24496A;
+  background-color: #002B5B;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,13 +22,71 @@ header * {
   display: inline;
 }
 
+h3{
+  color:white;
+  padding-left: 50px;
+}
+
 header li {
   margin: 20px;
+  padding: 20px;
 }
 
 header li a {
-  color: black;
+  color: white;
   text-decoration: none;
   
+}
+
+.home-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.home-h1{
+  position: relative;
+  width: 450px;
+  margin: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.home-btn{
+    width: 220px;
+    height: 80px;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: transparent;
+    color: black;
+    border: 5px solid #002B5B;
+    cursor: pointer;
+    box-shadow: 0 0 25px 0 rgb(21, 16, 65);
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    
+}
+
+.home-btn:hover {
+  background-color: #002B5B;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(16, 0, 54);
+}
+
+.home-btn a{
+  text-decoration: none;
+  color: black;
 }
 

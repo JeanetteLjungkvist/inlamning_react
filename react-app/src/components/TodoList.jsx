@@ -1,17 +1,24 @@
 import React, {useState} from "react";
-import {ListItem, OrderedList} from '@chakra-ui/react'
+import {ListItem, UnorderedList} from '@chakra-ui/react'
+import "./styles.css"
 
 const TodoList = () => {
 
     const [todos, setTodos] = useState([
         {
-            todo: 'todo1', 
+            todo: 'Walk the dogs', 
         },
         {
-            todo: 'todo2', 
+            todo: 'Grocery Shopping', 
         },
         {
-            todo: 'todo3', 
+            todo: 'Buy flowers', 
+        },
+        {
+            todo: 'Post a letter', 
+        },
+        {
+            todo: 'Do laundry', 
         },
     ])
     const addTodo = (todo => {
@@ -19,20 +26,19 @@ const TodoList = () => {
     })
 
   return (
-    <div>
-    <h2>Todo List</h2>
-    
-        <OrderedList>
+    <div >
+    <h1 className="todo-list">Todo List</h1> 
+        <Form addTodo={addTodo}/>
+        <UnorderedList className="ul-list">
             { todos.map(t => {
                 return(
-                    <ListItem key={t.todo}>{t.todo}
+                    <ListItem className="li-list" key={t.todo}>
+                        <span className="star">&#9733;</span>
+                        <span className="todo-item">{""} {t.todo}</span>
                     </ListItem>
                 )
             })}
-            
-        </OrderedList>
-        <Form addTodo={addTodo}/>
-        
+        </UnorderedList>
     </div>
   )
 }
@@ -47,18 +53,15 @@ const Form = ({addTodo}) => {
 return(
     <div>
     
-    <form onSubmit={submitTodo}>
+    <form className="todo-input" onSubmit={submitTodo}>
     <input
     type="text"
     placeholder="Add Todo"
     value={todo}
     onChange={(todosItem) => setTodo(todosItem.target.value)}
     />
-    <input type="submit" value="Add Todo">
-    
-    </input>
+    <input type="submit" value="Add Todo"/>
 
-    
     </form>
   </div>
 )

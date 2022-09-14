@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import About from './routes/About';
+import Counter from './routes/Counter';
 import List from './routes/List';
 
 
@@ -13,7 +13,7 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<App/>} />
-      <Route path="about" element={<About/>} />
+      <Route path="counter" element={<Counter/>} />
       <Route path="list" element={<List/>} />
     </Routes>
 </BrowserRouter>
